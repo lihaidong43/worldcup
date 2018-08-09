@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container">
+
+    <canvas canvas-id='crop-canvas' class='crop' style="width:{{imageWidth}}rpx;">
+  </canvas>
+   <image class='background' 
+   src='{{staticServer}}/background.jpg' bindload="imageLoad" ></image> 
+  <view class='logo' style="margin-top:{{isPhonex ? '-30px' : '0px'}}">
+  </view>
+   <view class = 'avatar' bindtap='selectPhoto'> 
+    <canvas class='flag' style="width:{{imageWidth}}rpx;" canvas-id='flag' >
+    </canvas>
+   </view> 
+   <!-- <view> -->
+    <view class = 'upload' bindtap='selectPhoto'>
+      <text class ='change' >点击更换头像</text>
+    </view>
+    <button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取头像</button>
+   <!-- </view> -->
+
+  <scroll-view  scroll-x class = 'scroll'>
+     <view class = 'slider' style='width:{{145*countries.length}}rpx;left:{{left}}px'> 
+      <view class ='country' wx:for="{{countries}}" wx:for-index="index"  wx:key ="{{item}}">
+          <image  bindtap='select' data-country ="{{item}}" data-index="{{index}}"
+          src='{{staticServer}}/country/{{item}}.png'>
+          </image>
+      <view class = 'selected' style="display:{{selectedIndex == index ? 'block' : 'none'}}" ></view>
+      </view>
+     </view> 
+  </scroll-view>
+  <view class ='btn'  bindtap='save'></view>
+  <!-- <view class='footer'>
+     <button class='share' id="shareBtn" open-type="share" type="primary" hover-class="other-button-hover">推荐给好友</button> 
+  </view> -->
+</view>

@@ -1,0 +1,15 @@
+<!--pages/upload/preview.wxml-->
+<view class='preview'>
+  <movable-area class='movable-area'  style='width:{{imageWidth}}px;height:{{imageHeight}}px'>
+    <image src='{{photoUrl}}' style='display:block;width:{{imageWidth}}px;height:{{imageHeight}}px' bindload='imageLoad' ></image> 
+    <canvas canvas-id='canvas' class='canvas' style='width:{{imageWidth}}px;height:{{imageHeight}}px'></canvas>
+     <movable-view  direction = 'all' x = '{{maskLeft}}' y = '{{maskTop}}' scale = 'true' scale-value = '1' animation = 'false' class = 'mask' style='display:{{maskDisplay}};width:{{maskWidth}};height:{{maskHeight}}' bindchange = 'maskMove' bindscale = 'maskScale' > 
+       
+     </movable-view> 
+  </movable-area>
+  
+</view>
+<view class='opt'>
+  <text class='rechoose' bindtap='choosePhoto'>重新选择</text><text bindtap='clip'>确定</text>
+</view>
+

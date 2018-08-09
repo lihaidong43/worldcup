@@ -1,0 +1,110 @@
+
+/**index.wxss**/
+ page {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+} 
+
+.container .background {
+  position: absolute;
+  width: 100%;
+   height: 100%; 
+   top: 0px;
+   z-index: 1;
+}
+.container .mask {
+  position: absolute;  
+  width:0px;
+  height:0px;
+  overflow:hidden;
+}
+.logo {
+   /* margin: 20rpx 0rpx 0rpx;  */
+  height: 300rpx; 
+  width: 1100rpx;
+  background: url(https://m.milaigame.com/football/logo.png) no-repeat;
+  background-position: center ; 
+  background-size: 60%;
+  z-index: 1;
+}
+.avatar {
+  margin: 20rpx 0prx;
+  height: 315rpx;
+}
+.flag {
+  z-index: 1;
+  height: 100%;
+}
+
+.crop {
+  position: absolute; 
+  width: 315px;
+  height: 315px;
+  left:-315px;
+  top:-315px;
+}
+
+
+.upload {
+  margin: 2rpx 0;  
+  z-index: 1;  
+}
+.upload .change {
+  color: #FFF;
+  font-size: 30rpx;  
+}
+ 
+.scroll {
+  background: url(https://m.milaigame.com/football/country-select.png) no-repeat;
+  margin: 40rpx 0rpx; 
+  background-size: 100% 270rpx ; 
+  background-position: center;
+  width: 100%;
+  z-index: 1;
+  height: 270rpx; 
+} 
+.scroll .country {
+  float: left;
+  position: relative;
+  top:100rpx;
+  margin-left:30rpx;
+   background-size: 100% 100%;  
+  z-index: 2;
+  background-position: center -5rpx;
+  /* height: 270rpx; */
+  width: 115rpx;
+  height: 153rpx;
+}
+.scroll .selected {
+  background: url(https://m.milaigame.com/football/selected.png) no-repeat;
+  background-size: 115rpx 153rpx; 
+  height: 153rpx;
+   width: 115rpx; 
+  position: absolute;
+  top:0px;
+  z-index: 3;
+  display: none;
+}
+
+.scroll image {
+ width:100%;
+ height:100%;
+
+}
+.btn {
+  background: url(https://m.milaigame.com/football/save.png) no-repeat;
+  height: 85px;
+  width: 275px;
+  background-size: 60% 60%;
+  background-position: center;
+  /* margin: 60rpx 0rpx;    */
+  z-index: 1;
+}
+
+.footer {
+   margin: 50rpx 0rpx; 
+  font-size: 30rpx;
+  color: #fff;
+  z-index: 1;
+}

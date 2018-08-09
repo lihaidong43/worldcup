@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/upload/preview"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#032084",
+    "navigationBarTitleText": "2018世界杯",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#000"
+  }
+}
